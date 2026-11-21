@@ -1,0 +1,5 @@
+{"id": "E001", "name": "steady fast mover, low stock", "sku": "FLW-001", "weekly_sales": [40, 42, 38, 41], "on_hand": 20, "lead_time_days": 7, "expect": {"reorder": true, "qty_min": 120, "qty_max": 160, "flags": []}, "note": "Policy (2026-11-22): hold ~4 weeks of cover on steady fast movers; a stockout on a best-seller costs loyalty, which outweighs the extra cash tied up."}
+{"id": "E002", "name": "slow mover, plenty of stock", "sku": "EDB-014", "weekly_sales": [3, 2, 4, 3], "on_hand": 60, "lead_time_days": 7, "expect": {"reorder": false, "flags": []}}
+{"id": "E003", "name": "promo spike last week", "sku": "VAP-007", "weekly_sales": [20, 22, 19, 65], "on_hand": 30, "lead_time_days": 7, "expect": {"reorder": true, "qty_max": 70, "flags": ["promo_or_spike"]}}
+{"id": "E004", "name": "missing sales data", "sku": "PRE-003", "weekly_sales": [], "on_hand": 15, "lead_time_days": 7, "expect": {"reorder": null, "flags": ["insufficient_data"]}}
+{"id": "E005", "name": "zero stock, steady demand (stockout)", "sku": "FLW-022", "weekly_sales": [15, 14, 0, 0], "on_hand": 0, "lead_time_days": 10, "expect": {"reorder": true, "flags": ["stockout_suppressed_demand"]}}
