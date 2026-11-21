@@ -25,6 +25,6 @@ Cannabis retailers juggle hundreds of SKUs with short shelf lives, compliance li
 | `CLAUDE.md` | Instructions for Claude Code when working in this repo |
 
 ## Status
-v0 deterministic core built. **Eval pass rate: 4/5 (80%)**, and the one failure is a deliberate open product decision (see BUILD_LOG).
+v0 deterministic core built. **Eval pass rate: 5/5 (100%)** after a deliberate policy decision on stock cover (see the decision log).
 
 Run it: `python3 src/reorder.py` · Test it: `python3 evals/run_evals.py`

@@ -16,3 +16,9 @@ Honest weekly notes: what shipped, what I learned, what broke.
 - **First real failure (E001):** for a steady seller (~40/week, 20 on hand, 7-day lead time) v0 orders 141 units; the eval expects 50-90. Cause: v0 targets ~4 weeks of stock (lead time + 1 week safety + 2 weeks). For cannabis flower (short shelf life, cash tied up) that's probably too much.
 - This is a **product decision, not a bug**. Options: (A) target less cover, which saves cash but raises stockout risk; (B) keep 4 weeks and change the eval. Decision pending (Dan).
 - Learned: writing the eval first exposed a hidden policy choice (how much stock to hold) that would otherwise have been buried in code.
+
+## 2026-11-22: Decision on E001, and eval rerun
+- Decision (Dan): **Option B**. Keep ~4 weeks of cover on steady fast movers. Running out of a best-seller risks customer loyalty.
+- Updated eval E001 to encode the policy (120-160 units) and recorded the reason in the scenario and the decision log. This is a deliberate policy change, not a loosened test to make the score look better.
+- **Eval pass rate: 5/5 (100%)**, up from 4/5.
+- Open risk: the same 4-week policy may over-order slow movers or short-shelf-life products. Next eval to add: a slow mover near its reorder point, and a short-shelf-life SKU.
